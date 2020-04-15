@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="myCanvas" width="850" height="500" style="border: 10px solid">
+    <img id="corona" width="220" height="277" src="gambar.jpg" alt="Virus">
+    </canvas>
+    <script>
+    window.onload = function() {
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        var img = document.getElementById("corona");
+        function draw(){
+        ctx.drawImage(img, 10, 10);
+        ctx.shadowColor = "black";
+        ctx.shadowBlur = 6;
+        ctx.shadowOffsetX = 6;
+        ctx.shadowOffsetY = 6;
+        ctx.shadowColor = "black";
+        ctx.font = "bold 60px Verdana";
+        ctx.fillStyle = "#98ff30";
+        ctx.fillText("Virus corona", 200, 230);
+        ctx.font = "normal 20px Verdana";
+        ctx.fillStyle = "#ffffff";
+        ctx.fillText("#SocialDistancing", 200, 280);
+        ctx.fillText("#StayAtHome", 200, 310);
+        ctx.fillText("#MenjagaKebersihan", 390, 280);
+        ctx.fillText("#JagaJarak", 390, 310);
+        ctx.textAlign = "center";
+    }
+    draw();
+    };
+    </script>
+</body>
+</html>
